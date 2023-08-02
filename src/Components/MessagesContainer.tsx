@@ -1,8 +1,5 @@
 import React from "react";
-
-interface MessagesContainerProps {
-  children: React.ReactNode;
-}
+import { MessagesContainerProps } from "../interfaces";
 
 const MessagesContainer: React.FC<MessagesContainerProps> = ({ children }) => {
   return (

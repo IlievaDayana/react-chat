@@ -1,9 +1,5 @@
 import React from "react";
-
-interface WrapperContainerProps {
-  children: React.ReactNode;
-  containerId?: string;
-}
+import { WrapperContainerProps } from "../interfaces";
 
 const WrapperContainer: React.FC<WrapperContainerProps> = ({
   children,

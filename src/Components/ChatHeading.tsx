@@ -1,12 +1,5 @@
 import React from "react";
-
-interface ChatHeadProps {
-  config: {
-    image: string;
-    name: string;
-    role: string;
-  };
-}
+import { ChatHeadProps } from "../interfaces";
 
 const ChatHeading: React.FC<ChatHeadProps> = ({ config }) => {
   return (

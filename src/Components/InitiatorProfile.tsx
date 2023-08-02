@@ -1,13 +1,5 @@
 import React from "react";
-
-interface InitiatorProps {
-  config: {
-    image: string;
-    name: string;
-    role: string;
-    welcome: string;
-  };
-}
+import { InitiatorProps } from "../interfaces";
 
 const InitiatorProfile: React.FC<InitiatorProps> = ({ config }) => {
   return (
@@ -15,7 +7,7 @@ const InitiatorProfile: React.FC<InitiatorProps> = ({ config }) => {
       <div className="text-center mx-7.5 mb-7.5 max-w-sm flex flex-col">
         <span className="text-center mx-7.5 mb-7.5 max-w-sm">{config.welcome}</span>
         <span className="w-15 h-15 overflow-hidden relative inline-block m-auto rounded-full">
-          <img src={config.image} alt="image" />
+          <img src={config.image} alt="assistant-profile" />
         </span>
         <span className="w-start-profile">
           <div className="text-2xl font-semibold">{config.name}</div>

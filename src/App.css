@@ -3,6 +3,14 @@
 @tailwind utilities;
 
 @layer base {
+  button:focus,
+  input:focus {
+    outline: 0;
+  }
+  input {
+    -webkit-appearance: none;
+  }
+
   input:-webkit-autofill,
   input:-webkit-autofill:hover,
   input:-webkit-autofill:focus,
@@ -17,5 +25,38 @@
     border: 1px solid var(--lumina);
     transition: background-color 5000s ease-in-out 0s;
     caret-color: rgb(var(--zephyr));
+  }
+  button,
+  input,
+  textarea {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+    background: 0 0;
+    color: rgb(var(--zephyr));
+    font-weight: var(--font-weight-normal);
+  }
+  :focus-visible {
+    outline: 0;
+  }
+
+  input:focus {
+    outline: 0;
+  }
+
+  input,
+  textarea {
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+  }
+}
+
+@layer utilities {
+  .pre-wrap {
+    white-space: pre-wrap;
   }
 }

@@ -15,9 +15,13 @@ module.exports = {
         15: "60px",
         2.75: "11px",
         5: "20px",
+        3.75: "15px",
       },
       borderRadius: {
         custom: "20px",
+      },
+      maxWidth: {
+        "375px": "375px",
       },
       keyframes: {
         wave: {

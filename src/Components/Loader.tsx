@@ -1,8 +1,5 @@
 import React from "react";
-
-type WaveProps = {
-  isLoading: boolean;
-};
+import { WaveProps } from "../types";
 
 const Wave: React.FC<WaveProps> = ({ isLoading }) => {
   if (!isLoading) {
