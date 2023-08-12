@@ -1,5 +1,5 @@
 export type Message = {
-  variant: string;
+  role: string;
   content: string;
 };
 

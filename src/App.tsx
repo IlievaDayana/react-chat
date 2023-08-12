@@ -13,12 +13,34 @@ import { assistant } from "./config/assistant";
 import { translations } from "./config/translations";
 import Bubble from "./Components/Bubble";
 import { Message } from "./types";
+import socketIOClient from "socket.io-client";
 
 function App() {
+  const socket = socketIOClient("http://localhost:4000");
   const [isLoading, setIsLoading] = React.useState(true);
   const [messages, setMessages] = React.useState<Message[]>(() => {
     const savedMessages = localStorage.getItem("messages");
     return savedMessages ? JSON.parse(savedMessages) : [];
+  });
+
+  const addAssistantMessage = (message: any) => {
+    console.log(message, messages);
+
+    setMessages((prevMessages) => [
+      ...prevMessages,
+      {
+        role: "assistant", // or 'assistant', depending on who is sending the
+        content: message.content,
+      },
+    ]);
+  };
+
+  React.useEffect(() => {
+    socket.on("answer", (data) => {
+      console.log("recieved ANSWER", data);
+
+      addAssistantMessage(data);
+    });
   });
 
   React.useEffect(() => {
@@ -40,11 +62,12 @@ function App() {
     setMessages((prevMessages) => [
       ...prevMessages,
       {
-        variant: "user", // or 'assistant', depending on who is sending the message
+        role: "user", // or 'assistant', depending on who is sending the message
         content: newMessage,
       },
     ]);
 
+    socket.emit("question", messages);
     e.currentTarget.value = "";
   };
 
@@ -57,7 +80,7 @@ function App() {
           {messages.map((message: any, index: number) => (
             <Bubble
               key={index}
-              variant={message.variant}
+              variant={message.role}
               content={message.content}
             />
           ))}
