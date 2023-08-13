@@ -12,7 +12,7 @@ const ChatWrapper: React.FC<ChatWrapperProps> = ({ children }) => {
 
   return (
     <div
-      className="flex justify-between flex-col text-zephyr bg-whisper m-auto pb-3 max-w-3xl"
+      className="flex justify-between flex-col text-zephyr bg-messages m-auto max-w-3xl"
       style={{ height: `${height}px` }}
     >
       {children}

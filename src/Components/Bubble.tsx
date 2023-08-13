@@ -8,14 +8,16 @@ const Bubble: React.FC<BubbleProps> = ({
 }) => {
   let variantClasses;
   const baseClasses =
-    "py-2.75 px-3.75 relative block relative block rounded-lg max-w-375px mb-5 text-left w-fit pre-wrap";
+    "py-2.75 px-3.75 relative block relative block max-w-375px mb-5 text-left w-fit pre-wrap";
 
   switch (variant) {
     case "assistant":
-      variantClasses = "bg-messages-assistant-bg ml-0 mr-auto";
+      variantClasses =
+        "bg-messages-assistant text-messages-assistant-text shadow-messages-assistant-shadow rounded-tr-custom rounded-b-custom ml-0 mr-auto";
       break;
     case "user":
-      variantClasses = "bg-green-600 text-white ml-auto mr-0 js-user";
+      variantClasses =
+        "text-messages-user-text bg-messages-user shadow-messages-user-shadow rounded-bl-custom rounded-t-custom ml-auto mr-0 js-user";
       break;
     default:
       variantClasses = "bg-blue-600 hover:bg-blue-700";

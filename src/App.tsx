@@ -92,7 +92,7 @@ function App() {
             {translations.error}
           </div>
           <div
-            className="flex justify-between items-center pt-0 px-5 py-2.75"
+            className="bg-input shadow-input-shadow flex justify-between items-center pt-0 px-5 py-2.75"
             id="prompt-container"
           >
             <span className="rounded-custom bg-lumina w-full mr-2.75">
