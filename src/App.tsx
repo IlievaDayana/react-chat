@@ -1,5 +1,5 @@
-import React from "react";
 import "./App.css";
+import React from "react";
 import Button from "./Components/Button";
 import Loader from "./Components/Loader";
 import ChatHeading from "./Components/ChatHeading";
@@ -9,10 +9,10 @@ import MessagesContainer from "./Components/MessagesContainer";
 import InitiatorProfile from "./Components/InitiatorProfile";
 import SendIcon from "./Icons/Send";
 import Input from "./Components/Input";
-import { assistant } from "./config/assistant";
-import { translations } from "./config/translations";
 import Bubble from "./Components/Bubble";
 import { Message } from "./types";
+import { assistant } from "./config/assistant";
+import { translations } from "./config/translations";
 import socketIOClient from "socket.io-client";
 
 function App() {
@@ -36,6 +36,7 @@ function App() {
   };
 
   React.useEffect(() => {
+    document.querySelector("body")?.classList.add("light");
     socket.on("answer", (data) => {
       console.log("recieved ANSWER", data);
 

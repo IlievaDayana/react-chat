@@ -8,6 +8,36 @@ module.exports = {
         wave2: "wave 1.3s linear infinite -1.1s",
         wave3: "wave 1.3s linear infinite -0.9s",
       },
+      colors: {
+        "head-bg": "var(--head-bg)",
+        "head-title": "var(--head-title)",
+        "head-subtitle": "var(--head-subtitle)",
+        "head-status": "var(--head-status)",
+        "head-shadow": "var(--head-shadow)",
+
+        "messages-bg": "var(--messages-bg)",
+        "messages-initial-text": "var(--messages-initial-text)",
+
+        "messages-assistant-bg": "var(--messages-assistant-bg)",
+        "messages-assistant-text": "var(--messages-assistant-text)",
+        "messages-assistant-shadow": "var(--messages-assistant-shadow)",
+        "messages-assistant-options-bg": "var(--messages-assistant-options-bg)",
+        "messages-assistant-options-shadow":
+          "var(--messages-assistant-options-shadow)",
+
+        "messages-user-bg": "var(--messages-user-bg)",
+        "messages-user-text": "var(--messages-user-text)",
+        "messages-user-shadow": "var(--messages-user-shadow)",
+
+        "input-send-icon-bg": "var(--input-send-icon-bg)",
+        "input-bg": "var(--input-bg)",
+        "input-placeholder": "var(--input-placeholder)",
+        "input-text-color": "var(--input-text-color)",
+        "input-shadow": "var(--input-shadow)",
+
+        "cta-button-bg": "var(--cta-button-bg)",
+        "cta-button-color": "var(--cta-button-color)",
+      },
       spacing: {
         12: "50px",
         2.5: "10px",

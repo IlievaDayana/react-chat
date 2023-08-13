@@ -12,7 +12,7 @@ const Bubble: React.FC<BubbleProps> = ({
 
   switch (variant) {
     case "assistant":
-      variantClasses = "bg-gray-600 ml-0 mr-auto";
+      variantClasses = "bg-messages-assistant-bg ml-0 mr-auto";
       break;
     case "user":
       variantClasses = "bg-green-600 text-white ml-auto mr-0 js-user";
