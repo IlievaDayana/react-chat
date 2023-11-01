@@ -1,7 +1,7 @@
 name: Pre-merge
 on:
   pull_request:
-    types: [closed]
+    types: [locked]
   merge_group:
     types: [checks_requested]
 jobs:
